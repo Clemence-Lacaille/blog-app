@@ -22,7 +22,11 @@ const ShowScreen = ({ navigation }) => {
 ShowScreen.navigationOptions = ({ navigation }) => {
    return {
     headerRight: () =>(
-      <TouchableOpacity onPress={() => navigation.navigate('Edit')}>
+      <TouchableOpacity 
+      onPress={() => 
+      navigation.navigate('Edit', { id: navigation.getParam('id') })
+    }
+      >
                   <FontAwesome5 name="pencil-alt" size={24} color="black" />
       </TouchableOpacity>
 
